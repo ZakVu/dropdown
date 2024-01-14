@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>Dropdown</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+
+		body {
+			font-family: Helvetica;
+			background: dimgrey;
+			display: block;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		.dropdown {
+			min-width: 15em;
+			position: relative;
+			margin: 3em;
+			color: #fff;
+			background: #2a2f3b;
+			justify-content: space-between;
+			align-items: center;
+			border: 2px solid;
+			border-radius: 1em;
+			padding: 1em;
+			transition: background 1.3s;
+			font-size: 2em;
+		}
+		.dropdown:hover{
+			background: orange;
+		}
+		
+		option {
+			color: black;
+
+		}
+
+		.myDiv {
+			border: 2px, solid;
+			border-radius: 2em;
+			align-items: center;
+			background: grey;
+			position: relative;
+			margin: 20px;
+			display: flex;
+			color: white;
+			font-size: 2em;
+			justify-content: center;
+			transition: background 1s;
+			
+		}
+
+		.myDiv:hover{
+			background: orange;
+		}
+
+
+	</style>
+	
+	
+</head>
+<body>
+
+	
+	<select id="dogs" class="dropdown">
+		<option value="cane corso">Cane Corso</option>
+		<option value="labrador">Labrador</option>
+		<option value="šarplaninac">Šarplaninac</option>
+		<option value="azijat">Azijat</option>
+	</select>
+
+
+
+
+	
+	
+	<div id="conC" class="myDiv">
+		
+	</div>
+
+	<script>
+        
+       
+		function updateOutput() {
+ 
+  			var comboBox = document.getElementById("dogs");
+  
+  
+  			var outputDiv = document.getElementById("conC");
+  
+  
+  			var selectedValue = comboBox.value;
+  
+  
+  			outputDiv.innerHTML = "Selektovana rasa psa je: " + selectedValue;
+				}
+
+		document.getElementById("dogs").addEventListener("change", updateOutput);
+    </script>
+			
+</body>
+</html>
